@@ -1,6 +1,6 @@
 {
   "name": "@tushardev01/farm-password",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "./app.js",
   "exports": {
@@ -30,4 +30,3 @@
   "license": "ISC",
   "description": "Generates passwords and provides handy character arrays."
 }
-
