@@ -1,0 +1,100 @@
+# gen-password
+
+A simple password generator for Node.js with handy character arrays and CLI support.  
+Generates secure random passwords using lowercase, uppercase, numbers, and symbols.
+
+---
+
+## Features
+
+- Generate passwords of custom length
+- Built-in arrays: lowercase letters, uppercase letters, numbers, symbols
+- Shuffle characters from multiple arrays
+- CLI support (`genpass`)
+- TypeScript typings included
+
+---
+
+## Installation
+
+```bash
+npm install @tushardev01/farm-password
+```
+
+# Usage (JavaScript / ESM)
+```bash
+import { genPassword, shuffleMax, genLowerLetters, genUpperLetters, genNumbers, genSymbols } from '@tushardev01/gen-password';
+
+// Generate a password with default character sets
+const password1 = genPassword(16);
+console.log(password1); // Example: 'aB3@fGh1$Jk2LmN4'
+
+// Create a custom character array
+const customChars = [
+  genLowerLetters(),
+  genUpperLetters(),
+  genNumbers(),
+  genSymbols()
+];
+
+// Shuffle and pick 12 characters
+const shuffled = shuffleMax(12, customChars).join('');
+console.log(shuffled); // Example: '@B3a1C$dEfG2'
+```
+# CLI Usage
+
+After installing, you can run:
+```bash
+npx genpass
+# or, if installed globally
+genpass
+```
+This generates a password with default settings.
+
+### Functions
+genPassword(charLength?: number): string
+
+Generates a password using default arrays
+
+charLength – optional, default is 25
+
+shuffleMax(charLength?: number, lists: string[][]): string[]
+
+Randomly picks characters from multiple character arrays
+
+charLength – optional, default 25
+
+lists – array of string arrays, e.g., [genLowerLetters(), genNumbers()]
+
+genLowerLetters(): string[]
+
+Returns lowercase letters: ['a','b',...,'z']
+
+genUpperLetters(): string[]
+
+Returns uppercase letters: ['A','B',...,'Z']
+
+genNumbers(): string[]
+
+Returns numbers: ['0','1',...,'9']
+
+genSymbols(): string[]
+
+Returns symbols: ['!','@','#','$','%','^','&','*','(',')']
+
+### TypeScript Support
+```bash
+import { genPassword, shuffleMax } from 'gen-password';
+
+const password: string = genPassword(16);
+const chars: string[] = shuffleMax(12, [
+  genLowerLetters(),
+  genNumbers(),
+]);
+```
+
+Types are included automatically via index.d.ts.
+
+### License
+
+ISC © Tushar Kumar

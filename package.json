@@ -1,0 +1,33 @@
+{
+  "name": "@tushardev01/farm-password",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./app.js",
+  "exports": {
+    ".": "./app.js"
+  },
+  "bin": {
+    "genpass": "./app.js"
+  },
+  "types": "./index.d.ts",
+  "files": [
+    "app.js",
+    "utility.js",
+    "README.md",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "password",
+    "password-generator",
+    "cli",
+    "security",
+    "generator"
+  ],
+  "author": "Tushar Kumar",
+  "license": "ISC",
+  "description": "Generates passwords and provides handy character arrays."
+}
+
