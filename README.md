@@ -52,35 +52,29 @@ genpass
 This generates a password with default settings.
 
 ### Functions
+
+```bash
 genPassword(charLength?: number): string
-
-Generates a password using default arrays
-
-charLength – optional, default is 25
+    Generates a password using default arrays
+    charLength – optional, default is 25
 
 shuffleMax(charLength?: number, lists: string[][]): string[]
-
-Randomly picks characters from multiple character arrays
-
-charLength – optional, default 25
-
-lists – array of string arrays, e.g., [genLowerLetters(), genNumbers()]
+    Randomly picks characters from multiple character arrays
+    charLength – optional, default 25
+    lists – array of string arrays, e.g., [genLowerLetters(), genNumbers()]
 
 genLowerLetters(): string[]
-
-Returns lowercase letters: ['a','b',...,'z']
+    Returns lowercase letters: ['a','b',...,'z']
 
 genUpperLetters(): string[]
-
-Returns uppercase letters: ['A','B',...,'Z']
+    Returns uppercase letters: ['A','B',...,'Z']
 
 genNumbers(): string[]
-
-Returns numbers: ['0','1',...,'9']
+    Returns numbers: ['0','1',...,'9']
 
 genSymbols(): string[]
-
-Returns symbols: ['!','@','#','$','%','^','&','*','(',')']
+    Returns symbols: ['!','@','#','$','%','^','&','*','(',')']
+```
 
 ### TypeScript Support
 ```bash
