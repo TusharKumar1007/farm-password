@@ -23,7 +23,7 @@ npm install @tushardev01/farm-password
 
 # Usage (JavaScript / ESM)
 ```bash
-import { genPassword, shuffleMax, genLowerLetters, genUpperLetters, genNumbers, genSymbols } from '@tushardev01/gen-password';
+import { genPassword, shuffleMax, genLowerLetters, genUpperLetters, genNumbers, genSymbols } from '@tushardev01/farm-password';
 
 // Generate a password with default character sets
 const password1 = genPassword(16);
