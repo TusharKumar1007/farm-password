@@ -28,5 +28,8 @@
   ],
   "author": "Tushar Kumar",
   "license": "ISC",
-  "description": "Generates passwords and provides handy character arrays."
+  "description": "Generates passwords and provides handy character arrays.",
+  "dependencies": {
+    "clipboardy": "^5.0.2"
+  }
 }
