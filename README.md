@@ -25,8 +25,8 @@ genpass
 genpass -c
 ```
 
-genpass: logs random password
-genpass -c: logs random password and copies to clipboard
+- `genpass`: logs random password
+- `genpass -c`: logs random password and copies to clipboard
 
 
 ---
