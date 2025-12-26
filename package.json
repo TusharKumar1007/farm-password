@@ -1,6 +1,6 @@
 {
   "name": "@tushardev01/farm-password",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "main": "./app.js",
   "exports": {
