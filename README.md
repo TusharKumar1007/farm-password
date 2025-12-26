@@ -18,15 +18,15 @@ Generates secure random passwords using lowercase, uppercase, numbers, and symbo
 - TypeScript typings included
 
 
-#### To use genpass:
+#### To use genpass cli:
 ```bash
-npm i
-npm link
+npm install -g @tushardev01/farm-password
+genpass 
+genpass -c
 ```
 
-#### Usage:
-run ```bash genpass``` to log random password
-run ```bash genpass -c``` to log and copy to clipboard
+genpass: logs random password
+genpass -c: logs random password and copies to clipboard
 
 
 ---

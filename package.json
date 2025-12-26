@@ -7,10 +7,11 @@
     ".": "./app.js"
   },
   "bin": {
-    "genpass": "./app.js"
+    "genpass": "./cli.js"
   },
   "types": "./index.d.ts",
   "files": [
+    "cli.js",
     "app.js",
     "utility.js",
     "README.md",
