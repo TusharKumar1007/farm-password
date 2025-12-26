@@ -5,8 +5,11 @@ import {genLowerLetters,
 	genNumbers,
 	genSymbols,
 	shuffleMax,
-	genPassword
+	genPassword,
+	randomNumIn,
+	shuffle,
 } from './utility.js';
+
 
 export{
   genLowerLetters,
@@ -14,5 +17,7 @@ export{
   genNumbers,
   genSymbols,
   shuffleMax,
-  genPassword
+  genPassword,
+  randomNumIn,
+  shuffle
 };

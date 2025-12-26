@@ -27,7 +27,7 @@ npm install @tushardev01/farm-password
 
 # Usage (JavaScript / ESM)
 ```bash
-import { genPassword, shuffleMax, genLowerLetters, genUpperLetters, genNumbers, genSymbols } from '@tushardev01/farm-password';
+import { genPassword, shuffleMax, genLowerLetters, genUpperLetters, genNumbers, genSymbols, randomNumIn, shuffle } from '@tushardev01/farm-password';
 
 // Generate a password with default character sets
 const password1 = genPassword(16);
@@ -42,7 +42,7 @@ const customChars = [
 ];
 
 // Shuffle and pick 12 characters
-const shuffled = shuffleMax(12, customChars).join('');
+const shuffled = shuffle(shuffleMax(12, customChars)).join('');
 console.log(shuffled); // Example: '@B3a1C$dEfG2'
 ```
 # CLI Usage
@@ -78,6 +78,12 @@ genNumbers(): string[]
 
 genSymbols(): string[]
     Returns symbols: ['!','@','#','$','%','^','&','*','(',')']
+
+randomNumIn(x,y): number
+    Returns a random Number [x,y] i.e. including x,y and numbers in between
+
+shuffle(arr: any[],inPlace: boolean): any[]
+    Returns a new array or the same one with items shuffled
 ```
 
 ### TypeScript Support
