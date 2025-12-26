@@ -84,6 +84,7 @@ export const shuffleMax = (charLength = 25, lists) => {
  * @param {number} [charLength=25] The length of the password to generate. Default is 25 characters.
  * @returns {string} The generated random password.
  */
+const passLists = [genLowerLetters(), genNumbers(), genSymbols(), genUpperLetters()];
 export const genPassword = (charLength = 25) => {
         const password = shuffle(shuffleMax(charLength, passLists)).join('');
         return password;
