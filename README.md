@@ -1,4 +1,4 @@
-# gen-password
+# farm-password
 
 A simple password generator for Node.js with handy character arrays and CLI support.  
 Generates secure random passwords using lowercase, uppercase, numbers, and symbols.
