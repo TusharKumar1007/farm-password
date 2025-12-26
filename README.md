@@ -17,6 +17,18 @@ Generates secure random passwords using lowercase, uppercase, numbers, and symbo
 - CLI support (`genpass`)
 - TypeScript typings included
 
+
+#### To use genpass:
+```bash
+npm i
+npm link
+```
+
+#### Usage:
+run ```bash genpass``` to log random password
+run ```bash genpass -c``` to log and copy to clipboard
+
+
 ---
 
 ## Installation
