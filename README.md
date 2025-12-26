@@ -88,7 +88,7 @@ shuffle(arr: any[],inPlace: boolean): any[]
 
 ### TypeScript Support
 ```bash
-import { genPassword, shuffleMax } from 'gen-password';
+import { genPassword, shuffleMax, shuffle, randomNumIn } from '@tushardev01/gen-password';
 
 const password: string = genPassword(16);
 const chars: string[] = shuffleMax(12, [
