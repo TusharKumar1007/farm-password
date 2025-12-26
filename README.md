@@ -3,6 +3,10 @@
 A simple password generator for Node.js with handy character arrays and CLI support.  
 Generates secure random passwords using lowercase, uppercase, numbers, and symbols.
 
+## Package Information
+
+🔗 **npm Package**: [https://www.npmjs.com/package/@tushardev01/farm-password](https://www.npmjs.com/package/@tushardev01/farm-password)
+
 ---
 
 ## Features
