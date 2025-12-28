@@ -49,6 +49,31 @@ export function shuffleMax(
   lists?: string[][] 
 ): string[];
 
+
+/**
+ * A utility function to collect a specified number of random elements from an array, 
+ * allowing duplicates in the collected array.
+ * 
+ * @param arr The array to collect random elements from.
+ * @param population The number of random elements to collect. Defaults to 5.
+ * @returns An array of random elements, which may include duplicates.
+ */
+declare function collect<T>(arr: T[], population?: number): T[];
+
+/**
+ * A utility function to sample a specified number of unique random elements from an array.
+ * 
+ * Throws an error if there aren't enough unique elements in the array to meet the requested population.
+ * 
+ * @param arr The array to sample unique random elements from.
+ * @param population The number of unique random elements to sample. Defaults to 5.
+ * @returns An array of unique random elements, or `undefined` if an error occurs.
+ * @throws Error If the number of unique elements in the array is less than the requested population.
+ */
+declare function sample<T>(arr: T[], population?: number): T[] | undefined;
+
+export { collect, sample };
+
 /**
  * Generates a password by randomly selecting characters from predefined lists (lowercase, uppercase, symbols, numbers),
  * then shuffling them to create a secure, random password.

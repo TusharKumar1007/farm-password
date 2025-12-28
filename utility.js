@@ -79,6 +79,66 @@ export const shuffleMax = (charLength = 25, lists) => {
 };
 
 /**
+ * Collects a specified number of random elements from an array (with possible duplicates).
+ * 
+ * @param {Array} arr - The array from which to collect random elements.
+ * @param {number} [population=5] - The number of random elements to collect. Defaults to 5.
+ * 
+ * @returns {Array} A new array containing the randomly collected elements. The array may contain duplicates.
+ * 
+ * @example
+ * const fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+ * const collected = collect(fruits, 3);  // Could return ['banana', 'apple', 'banana']
+ */
+export const collect=(arr, population = 5)=> {
+        const collectedArray = [];
+        for (let i = 0; i < population; i++) {
+                const randomNumber = randomNumIn(0, arr.length - 1);
+                collectedArray.push(arr[randomNumber]);
+        }
+        return collectedArray;
+}
+
+/**
+ * Samples a specified number of unique random elements from an array (no duplicates).
+ * 
+ * If the array has fewer unique elements than the requested population, an error will be thrown.
+ * 
+ * @param {Array} arr - The array from which to sample unique random elements.
+ * @param {number} [population=5] - The number of unique random elements to sample. Defaults to 5.
+ * 
+ * @returns {Array|undefined} An array of unique sampled elements, or `undefined` if an error occurs.
+ * 
+ * @throws {Error} Throws an error if there are not enough unique elements in the array to meet the requested population.
+ * 
+ * @example
+ * const fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+ * const sampled = sample(fruits, 3);  // Could return ['banana', 'apple', 'cherry']
+ * 
+ * @example
+ * const fruits = ['apple', 'banana', 'apple', 'banana'];
+ * sample(fruits, 3);  // Throws an error: "Array length without duplicates must be greater than population."
+ */
+export const sample=(arr, population = 5) =>{
+        const set = new Set();
+        try {
+                if (new Set(arr).size < population) {
+                        throw new Error("Array length without duplicates must be greater than population. Use collect function instead.");
+                }
+                while (set.size !== population) {
+                        const randomNumber = randomNumIn(0, arr.length - 1);
+                        set.add(arr[randomNumber]);
+                }
+
+                return [...set];
+        } catch (e) {
+                console.error(e);
+                return undefined;
+        }
+}
+
+
+/**
  * Generates a password by randomly selecting characters from predefined lists (lowercase, uppercase, symbols, numbers),
  * then shuffling them to create a secure, random password.
  * @param {number} [charLength=25] The length of the password to generate. Default is 25 characters.
@@ -89,3 +149,5 @@ export const genPassword = (charLength = 25) => {
         const password = shuffle(shuffleMax(charLength, passLists)).join('');
         return password;
 };
+
+

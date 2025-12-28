@@ -20,13 +20,25 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "password",
-    "password-generator",
-    "cli",
-    "security",
-    "generator"
-  ],
+"keywords": [
+  "utility",
+  "random",
+  "random-array",
+  "array-utils",
+  "array-sample",
+  "sampling",
+  "collect",
+  "shuffle",
+  "generator",
+  "password",
+  "password-generator",
+  "security",
+  "cli",
+  "javascript",
+  "node",
+  "npm"
+],
+
   "author": "Tushar Kumar",
   "license": "ISC",
   "description": "Generates passwords and provides handy character arrays.",

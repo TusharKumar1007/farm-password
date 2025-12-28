@@ -7,6 +7,8 @@ import {
   genPassword,
   randomNumIn,
   shuffle,
+  sample,
+  collect
 } from './utility.js';
 
 export {
@@ -17,5 +19,7 @@ export {
   shuffleMax,
   genPassword,
   randomNumIn,
-  shuffle
+  shuffle,
+  sample,
+  collect
 };
